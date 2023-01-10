@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Encriptador/desencriptador de textos</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+
+        <header>
+
+            <div class="caja">
+
+                <p>Encriptador/deencriptador de textos - Elaborado por Franz Much - 2022</p>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <div id = "area1">
+                <textarea id = "encriptador" placeholder = "Ingrese texto aquí" cols="40" rows="5"></textarea>
+                <label id = "advertencia">&#9888  Solamente usar letras minúsculas y sin acentos.</label>
+                <button id = "encriptar">Encriptar</button>
+                <button id = "desencriptar">Desencriptar</button>
+            </div>
+
+            <div id = "area2">
+                <label id = "respuesta">Acá se mostrará el texto después de encriptar o desencriptar.</label>
+                <img src="imagenes/dibujo.png" id="imagen" alt="Imagen antes de proceso de encriptación o desencriptación">
+                <div id="labels">
+                    <label id="mensaje1">Ningún mensaje fue encontrado</label>
+                    <label id="mensaje2">Ingresa el texto que desees encriptar o desencriptar</label>
+                </div>
+                <br>
+                <button id = "copiar">Copiar</button>
+            </div>
+
+            <script src="script.js"></script>
+
+        </main>
+
+    </body>
+
+</html>
+
+
