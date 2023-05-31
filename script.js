@@ -10,19 +10,18 @@ function encriptar(){
     document.getElementById('copiar').style.display = "block";
     document.getElementById('imagen').style.display = "none";
     document.getElementById('labels').style.display = "none";
-    var encriptado = "";
-    for(var i = 0; i<input.value.length; i++){
 
-        var indice = vocales.indexOf(input.value[i]);
-        if(indice >= 0){
-            encriptado = encriptado + llaves[indice];
-        } else {
-            encriptado = encriptado + input.value[i];
+    var encriptado = input.value.toLowerCase().split('');
+
+    for(var i = 0; i<encriptado.length; i++) {
+
+        if(vocales.indexOf(encriptado[i]) !== -1) {
+            encriptado[i] = llaves[vocales.indexOf(encriptado[i])];
         }
 
     }
 
-    document.getElementById('respuesta').innerHTML = encriptado;
+    document.getElementById('respuesta').innerHTML = encriptado.join('');
 
 }
 
@@ -32,51 +31,12 @@ function desencriptar(){
     document.getElementById('copiar').style.display = "block";
     document.getElementById('imagen').style.display = "none";
     document.getElementById('labels').style.display = "none";
-    var desencriptado = "";
-    var subcadena = "";
-    var incluye = false;
+    var desencriptado = input.value;
 
-    for(var i = 0; i < input.value.length; i++){
+    for(var i = 0; i<llaves.length; i++){
 
-        subcadena = subcadena + input.value[i];
-
-        for(var x = 0; x < llaves.length; x++){
-            
-            if(llaves[x] == subcadena){
-
-                desencriptado = desencriptado + vocales[x];
-                subcadena = "";
-                incluye = false;
-                break;
-
-            }
-            
-            
-            for(var y = 0; y < llaves[x].length; y++){
-
-                if(y >= subcadena.length){
-
-                    break;
-
-                } else {
-
-                    if(llaves[x][y] == subcadena[y]){
-
-                        incluye = true;
-
-                    }
-
-                }
-
-            }
-
-        }
-
-        if(!incluye){
-
-            desencriptado = desencriptado + subcadena;
-            subcadena = "";
-
+        if(desencriptado.includes(llaves[i])) {
+            desencriptado = desencriptado.replaceAll(llaves[i], vocales[i])
         }
 
     }
