@@ -1,6 +1,6 @@
 # INTRODUCCIÓN
 
-Este proyecto "encripta" texto cambiando las vocales (a, e, i, o, u) por (ai, enter, imes, ober, ufat). Para esto se necesita que el usuario ingrese texto en minúsculas y que no se utilicen carácteres especiales ni signos de puntuación.
+Este proyecto "encripta" texto cambiando las vocales (a, e, i, o, u) por (ai, enter, imes, ober, ufat) y viceseversa si se busca desencriptar bajo este mismo formato. Para esto se necesita que el usuario ingrese texto en minúsculas y que no se utilicen carácteres especiales ni signos de puntuación.
 
 # USO
 ## PANTALLA INICIAL
